@@ -1,30 +1,28 @@
-import React, { useState } from 'react'
-import data from '../data'
-import { Col, Container, Row } from 'react-bootstrap'
-import Question from './Question'
+import React, { useState } from 'react';
+import data from '../data';
+import { Col, Container, Row } from 'react-bootstrap';
+import Question from './Question';
 
 function Faqs() {
-    const [questions, setQuestions] = useState(data)
-    return (
-        <>
-            <Container className='title'>
-                <h1>FAQs</h1>
-                <Row>
-                    <Col md={{ span: 10, offset: 1 }}  className='faqContainer' >
-                        {
-                            questions.map((question) => {
-                                return (
-                                    <Row className='faqs'>
-                                        <Question key={question.id} {...question} />
-                                    </Row>
-                                )
-                            })
-                        }
-                    </Col>
+  const [questions, setQuestions] = useState(data);
+  return (
+    <>
+      <Container className="title">
+        <h1>FAQs</h1>
+        <Row>
+          <Col md={{ span: 10, offset: 1 }} className="faqContainer">
+            {questions.map((question) => {
+              return (
+                <Row className="faqs">
+                  <Question key={question.id} {...question} />
                 </Row>
-            </Container>
-        </>
-    )
+              );
+            })}
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
 }
 
-export default Faqs
+export default Faqs;

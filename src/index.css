@@ -11,3 +11,297 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.font {
+  font-family: 'Abril Fatface', cursive;
+}
+.navbar {
+  background-color: #dabcee98;
+}
+.brand {
+  padding: 5px;
+}
+.fa-birthday-cake {
+  font-size: 40px;
+  color: #e79a9afe;
+  color: #d6970a;
+}
+.toggle {
+  border-radius: 5px;
+  border: 2px solid #d6970a;
+  margin-right: 15px;
+}
+.fa-bars {
+  font-size: 40px;
+  background-color: #dabcee98;
+  color: #d6970a;
+  padding: 3px;
+}
+a:link {
+  text-decoration: none;
+  color: rgb(86, 83, 83);
+}
+
+a:hover {
+  color: rgb(86, 83, 83);
+}
+
+a:visited {
+  color: rgb(86, 83, 83);
+}
+.menuSection {
+  background-image: url(./images/gradienta.jpg);
+}
+h1 {
+  color: #d6970a;
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+}
+.title h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.filterContainer {
+  margin: 20px;
+}
+
+.filterButtons {
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 5px;
+  margin: 10px;
+  background-color: pink;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.filterButtons:hover {
+  background-color: #d6970a;
+}
+
+.cardHeight {
+  height: 200px;
+}
+
+img {
+  border: 2px solid #d6970a;
+}
+
+/* .menuItems {} */
+.itemNprice {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.price {
+  font-size: 18px;
+}
+
+.faqs {
+  margin: 10px;
+  padding: 20px;
+}
+
+.faqContainer {
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px 5px grey;
+  padding: 50px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.questionButton {
+  min-width: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: pink;
+  color: white;
+  font-size: 38px;
+  font-weight: 700;
+  font-family: 'Abril Fatface', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.questionButton:hover {
+  background-color: #d6970a;
+}
+
+.questionHeader {
+  padding: 10px;
+  border: 2px solid #d6970a;
+  box-shadow: 5px 20px 20px -10px grey;
+}
+
+.questionHeader h4 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.answer {
+  border: 2px solid gray;
+  border-top: none;
+  padding: 30px;
+}
+/* Cart */
+.cart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.cartSection {
+  background-image: url(./images/eberhard.jpg);
+  background-size: cover;
+  min-height: 600px;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  border-radius: 5px;
+  position: relative;
+}
+.cartTitle {
+  color: #d6970a;
+  font-family: 'Abril Fatface', cursive;
+  text-align: center;
+  margin: 10px auto;
+}
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+  padding: 10px;
+  background-color: rgb(231, 217, 220);
+  border-radius: 5px;
+}
+.checkoutItem {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid grey;
+}
+
+.itemCount {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartCount {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: pink;
+}
+.itemNumber {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+}
+.cart h6 {
+  font-family: 'Abril Fatface', cursive;
+  margin: 10px;
+}
+.totalContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.cartForm {
+  background-image: url(./images/eberhard.jpg);
+  background-size: cover;
+}
+.checkoutContainer {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.checkoutButton {
+  width: 95%;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 5px;
+  margin: auto;
+  background-color: #d6970a;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.checkoutButton:hover {
+  background-color: #dabcee98;
+  color: #d6970a;
+}
+
+/* Checkout modal */
+.modalHeader {
+  background-color: pink;
+}
+.modalHeader h1 {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  color: #d6970a;
+}
+/* Paystack Form */
+.paystackSection {
+  background-color: rgba(255, 255, 255, 0.425);
+  padding: 15px;
+  min-width: 360px;
+}
+.payStackTotal,
+.payStackSummary {
+  border-bottom: 2px solid #d6970a;
+}
+.payStackSummary {
+  margin-top: 10px;
+}
+.paystack-button {
+  width: 95%;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 5px;
+  margin: auto;
+  background-color: #d6970a;
+  font-family: 'Abril Fatface', cursive;
+}
+.paystack-button:hover {
+  background-color: #dabcee98;
+  color: #d6970a;
+}
+.fieldsets {
+  padding: 40px;
+}
+.checkout-field {
+  margin-bottom: 20px;
+  font-family: 'Abril Fatface', cursive;
+}
+label {
+  width: 25%;
+}
+input {
+  width: 75%;
+}
+@media screen and (min-width: 568px) {
+  .paystackSection {
+    margin: auto;
+  }
+}

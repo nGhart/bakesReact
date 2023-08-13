@@ -2,6 +2,8 @@ import './App.css';
 import Cart from './Components/Cart';
 import Faqs from './Components/Faqs';
 import Menu from './Components/Menu';
+import Review from './Components/Review';
+import NavigationBar from './Components/NavigationBar';
 
 function App() {
   return (
@@ -14,9 +16,11 @@ function App() {
           <i className="fas fa-bars"></i>
         </button>
       </div>
-      <Menu />
+      <NavigationBar />
+      {/* <Menu />
       <Faqs />
       <Cart />
+      <Review /> */}
     </>
   );
 }

@@ -5,6 +5,7 @@ import BakesHome from './Pages/BakesHome';
 import Review from './Components/Review';
 import Cart from './Components/Cart';
 import Faqs from './Components/Faqs';
+import Gallery from './Components/Gallery';
 
 const Routing = () => {
   return (
@@ -13,6 +14,7 @@ const Routing = () => {
       <Route path="menu" element={<Menu />} />
       <Route path="faqs" element={<Faqs />} />
       <Route path="cart" element={<Cart />} />
+      <Route path="gallery" element={<Gallery />} />
       <Route path="review" element={<Review />} />
     </Routes>
   );

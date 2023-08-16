@@ -50,10 +50,10 @@ function Menu() {
             <Row className="menu">
               {searchResults.length > 0 ? (
                 searchResults.map((val, id) => (
-                  <Col sm={6} lg={4} key={val.id}>
-                    <Card style={{ margin: '10px' }}>
+                  <Col sm={6} lg={4} key={val.id} 
+                    >
+                    <Card style={{ margin: '10px' }} className='cardBoxes'>
                       <div
-                      // className='cardHeight'
                       >
                         <Row>
                           <Col sm={4}>

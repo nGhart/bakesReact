@@ -2,22 +2,22 @@ import React from 'react';
 
 export const navbarItems = [
   {
-    page: 'home',
-    url: '/',
+    page: 'Menu',
+    url: 'menu',
     id: 1,
   },
   {
-    page: 'reviews',
-    url: 'reviews',
+    page: 'Reviews',
+    url: 'review',
     id: 2,
   },
   {
-    page: 'gallery',
+    page: 'Gallery',
     url: 'gallery',
     id: 3,
   },
   {
-    page: 'faqs',
+    page: 'FAQs',
     url: 'faqs',
     id: 4,
   },

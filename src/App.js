@@ -1,27 +1,16 @@
 import './App.css';
-import Cart from './Components/Cart';
-import Faqs from './Components/Faqs';
-import Menu from './Components/Menu';
-import Review from './Components/Review';
+import Routing from './Routing';
 import NavigationBar from './Components/NavigationBar';
+import { BrowserRouter } from 'react-router-dom';
+import Footer from './Components/Footer';
 
 function App() {
   return (
-    <>
-      <div className="navbar">
-        <div className="brand">
-          <i className="fas fa-birthday-cake">bakes</i>
-        </div>
-        <button className="toggle">
-          <i className="fas fa-bars"></i>
-        </button>
-      </div>
+    <BrowserRouter>
       <NavigationBar />
-      {/* <Menu />
-      <Faqs />
-      <Cart />
-      <Review /> */}
-    </>
+      <Routing />
+      <Footer/>
+    </BrowserRouter>
   );
 }
 

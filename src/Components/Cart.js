@@ -18,7 +18,7 @@ function Cart() {
   }
   return (
     <>
-      <Row className="cart">
+      <div className="cart">
         <Col sm={6}>
           <div className="cartSection">
             <h1 className=" cartTitle">My Cart</h1>
@@ -108,7 +108,7 @@ function Cart() {
             </Row>
           </div>
         </Col>
-      </Row>
+      </div>
 
       <Modal
         show={show}

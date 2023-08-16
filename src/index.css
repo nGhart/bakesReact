@@ -21,30 +21,55 @@ code {
 }
 /* Navbar */
 .navbar {
-  background-color: #dabcee98;
+  width: 100%;
+  z-index: 5;
+  padding-bottom: 16px;
+}
+
+.header {
+  display: flex;
+  z-index: 4;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #dabcee;
+}
+.center {
+  background-color: #dabcee;
+  position: fixed;
+  top: 0;
 }
 .brand {
   padding: 5px;
 }
 .fa-birthday-cake {
   font-size: 40px;
-  color: #e79a9afe;
   color: #d6970a;
 }
+.largeList {
+  display: none;
+  height: 50px;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
 .toggle {
+  position: absolute;
+  right: 5px;
   border-radius: 5px;
   border: 2px solid #d6970a;
-  margin-right: 15px;
 }
 .fa-bars,
 .fa-shopping-bag {
   font-size: 40px;
-  background-color: #dabcee98;
+  background-color: #dabcee;
   color: #d6970a;
   padding: 3px;
 }
 .fa-shopping-bag {
   border: none;
+  display: none;
+  padding-right: 50px;
 }
 .cartShortcut {
   border: none;
@@ -58,8 +83,11 @@ li {
 }
 .toggleContainer {
   height: 0;
+  width: 100%;
   overflow: hidden;
   transition: all 0.3s linear;
+
+  z-index: 4;
 }
 .show {
   height: 200px;
@@ -76,18 +104,62 @@ a:hover {
 a:visited {
   color: rgb(86, 83, 83);
 }
-.menuSection {
-  background-image: url(./images/gradienta.jpg);
-}
+
 h1 {
   color: #d6970a;
   text-align: center;
   font-family: 'Abril Fatface', cursive;
 }
 .title h1 {
-  margin-top: 50px;
+  margin-top: 35px;
   margin-bottom: 50px;
   color: #d6970a;
+}
+/* Home Page */
+.homeSection {
+  margin-top: 35px;
+  background-image: url(./images/devaSmall.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homeContainer {
+  color: white;
+  padding: 20px;
+  background-color: rgba(10, 117, 183, 0.488);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+}
+/* .homeContainer a {
+  color: white;
+} */
+.homeContainer a:link {
+  text-decoration: underline;
+  color: white;
+}
+.homeContainer a:hover {
+  color: rgb(86, 83, 83);
+}
+
+.homeContainer a:visited {
+  color: rgb(86, 83, 83);
+}
+
+.bigImage {
+  display: none;
+}
+/* Menu */
+.menuSection {
+  background-image: url(./images/gradienta.jpg);
 }
 .searchAndFilter {
   min-height: 677px;
@@ -211,14 +283,16 @@ img {
 /* Cart */
 .cart {
   width: 100%;
+  height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
   padding-bottom: 20px;
 }
 .cartSection {
   background-image: url(./images/eberhard.jpg);
   background-size: cover;
-  min-height: 600px;
+  min-height: 500px;
   flex-direction: column;
   width: 100%;
   justify-content: center;
@@ -352,6 +426,133 @@ label {
 }
 input {
   width: 75%;
+}
+.active {
+  color: #d6970a;
+}
+/* Review */
+.reviewSection {
+  margin-top: 30px;
+}
+
+.prev,
+.next {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.cardBoxes {
+  background-color: red;
+  z-index: 0;
+}
+.leftB,
+.rightB {
+  border: none;
+  border-radius: 50%;
+  padding: 2px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.471);
+}
+
+.leftB:hover,
+.rightB:hover {
+  background-color: #e79a9a90;
+}
+
+.reviewContainer {
+  padding: 20px;
+  margin-bottom: 70px;
+}
+
+.reviewImage {
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.471);
+}
+
+#reviewText {
+  padding: 0 120px;
+  font-style: italic;
+}
+
+/* Footer */
+.footer {
+  background-color: #dabcee;
+  padding: 10px;
+  height: 63px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* Media query */
+@media screen and (max-width: 7700px) {
+  #reviewText {
+    padding: 0 20px;
+    font-style: italic;
+  }
+}
+@media screen and (max-width: 500px) {
+  .leftB,
+  .rightB {
+    background-color: pink;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 10%;
+    z-index: 4;
+  }
+  .rightB {
+    right: 40%;
+  }
+  .leftB {
+    right: 50%;
+  }
+  .reviewPlusControls {
+    padding: 20px;
+    position: relative;
+  }
+  .reviewSection {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 730px) {
+  .toggle {
+    display: none;
+  }
+  .largeList {
+    display: flex;
+  }
+  .fa-shopping-bag {
+    display: flex;
+  }
+  .show {
+    height: 0;
+  }
+  .homeSection {
+    background-image: url(./images/caitlynBig.jpg);
+
+    height: 85vh;
+  }
+  .homeContainer {
+    background-color: rgba(237, 192, 255, 0.843);
+    width: 40%;
+    height: 60%;
+  }
+  .bigImage {
+    display: block;
+  }
+  .smallImage {
+    display: none;
+  }
 }
 @media screen and (min-width: 568px) {
   .paystackSection {

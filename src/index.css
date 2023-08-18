@@ -54,7 +54,7 @@ code {
   align-items: center;
 }
 .toggle {
-  position: absolute;
+  position: fixed;
   right: 5px;
   border-radius: 5px;
   border: 2px solid #d6970a;
@@ -112,7 +112,7 @@ h1 {
 }
 .title h1 {
   margin-top: 35px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   color: #d6970a;
 }
 /* Home Page */
@@ -297,7 +297,7 @@ img {
   width: 100%;
   justify-content: center;
   border-radius: 5px;
-  position: relative;
+  /* position: relative; */
 }
 .cartTitle {
   color: #d6970a;
@@ -434,7 +434,6 @@ input {
 .reviewSection {
   margin-top: 30px;
 }
-
 .prev,
 .next {
   width: 100%;
@@ -444,12 +443,9 @@ input {
   align-items: center;
   background-color: transparent;
 }
-.cardBoxes {
-  background-color: red;
-  z-index: 0;
-}
 .leftB,
-.rightB {
+.rightB,
+.smallButtons {
   border: none;
   border-radius: 50%;
   padding: 2px;
@@ -460,25 +456,23 @@ input {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.471);
 }
-
 .leftB:hover,
 .rightB:hover {
   background-color: #e79a9a90;
 }
-
 .reviewContainer {
   padding: 20px;
-  margin-bottom: 70px;
 }
-
 .reviewImage {
   border-radius: 50%;
   border: 2px solid rgba(0, 0, 0, 0.471);
 }
-
 #reviewText {
-  padding: 0 120px;
+  padding: 0 10px;
   font-style: italic;
+}
+.smallButtons {
+  display: none;
 }
 
 /* Footer */
@@ -493,34 +487,39 @@ input {
 }
 
 /* Media query */
-@media screen and (max-width: 7700px) {
-  #reviewText {
-    padding: 0 20px;
-    font-style: italic;
-  }
-}
-@media screen and (max-width: 500px) {
-  .leftB,
-  .rightB {
-    background-color: pink;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    bottom: 10%;
-    z-index: 4;
-  }
-  .rightB {
-    right: 40%;
-  }
-  .leftB {
-    right: 50%;
+@media screen and (max-width: 580px) {
+  /* Review */
+  .reviewSection {
+    margin-bottom: 10px;
+    padding-bottom: 70px;
   }
   .reviewPlusControls {
     padding: 20px;
+  }
+  .leftB,
+  .rightB {
+    display: none;
+  }
+  .reviewContainer {
     position: relative;
   }
-  .reviewSection {
-    margin-bottom: 10px;
+  #customerName {
+    padding-bottom: 10px;
+  }
+  .smallButtonsContainer {
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .smallButtons {
+    display: flex;
+    background-color: pink;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
   }
 }
 
@@ -539,7 +538,6 @@ input {
   }
   .homeSection {
     background-image: url(./images/caitlynBig.jpg);
-
     height: 85vh;
   }
   .homeContainer {
@@ -557,5 +555,10 @@ input {
 @media screen and (min-width: 568px) {
   .paystackSection {
     margin: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #reviewText {
+    padding: 0 100px;
   }
 }

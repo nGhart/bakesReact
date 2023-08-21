@@ -297,7 +297,7 @@ img {
   width: 100%;
   justify-content: center;
   border-radius: 5px;
-  /* position: relative; */
+  position: relative;
 }
 .cartTitle {
   color: #d6970a;
@@ -357,6 +357,7 @@ img {
   display: flex;
   justify-content: center;
   padding: 10px;
+  width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -484,6 +485,9 @@ input {
   position: fixed;
   bottom: 0;
   left: 0;
+  /* display: flex;
+  align-items: center; */
+  margin: auto;
 }
 
 /* Media query */

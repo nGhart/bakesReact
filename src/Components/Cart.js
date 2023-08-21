@@ -96,16 +96,15 @@ function Cart() {
                 </h6>
               </div>
             </div>
-            <Row>
-              <Col className="checkoutContainer">
-                <button
-                  className="checkoutButton"
-                  onClick={() => handleShow(true)}
-                >
-                  Proceed to Checkout
-                </button>
-              </Col>
-            </Row>
+
+            <div className="checkoutContainer">
+              <button
+                className="checkoutButton"
+                onClick={() => handleShow(true)}
+              >
+                Proceed to Checkout
+              </button>
+            </div>
           </div>
         </Col>
       </div>
@@ -116,14 +115,6 @@ function Cart() {
         onHide={() => setShow(false)}
         className="checkoutSection"
       >
-        <div className="navbar" style={{ width: '100%' }}>
-          <div className="brand">
-            <i className="fas fa-birthday-cake">bakes</i>
-          </div>
-          <button className="toggle">
-            <i className="fas fa-bars"></i>
-          </button>
-        </div>
         <Modal.Header closeButton className="modalHeader">
           <h1>Checkout</h1>
         </Modal.Header>

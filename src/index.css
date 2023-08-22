@@ -494,6 +494,7 @@ input {
 /* Review */
 .reviewSection {
   margin-top: 30px;
+  padding-bottom: 80px;
 }
 .prev,
 .next {
@@ -517,12 +518,16 @@ input {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.471);
 }
-.leftB:hover,
+.leftB:hover {
+  background-color: #e79a9a;
+}
+
 .rightB:hover {
-  background-color: #e79a9a90;
+  background-color: rgb(40, 162, 146);
 }
 .reviewContainer {
   padding: 20px;
+  background-color: #d3aaee8a !important;
 }
 .reviewImage {
   border-radius: 50%;

@@ -7,7 +7,7 @@ function Faqs() {
   const [questions, setQuestions] = useState(data);
   return (
     <>
-      <Container className="title">
+      <Container className="title faqSection">
         <h1>FAQs</h1>
         <Row>
           <Col md={{ span: 10, offset: 1 }} className="faqContainer">

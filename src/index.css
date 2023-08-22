@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./images/gradienta.jpg);
 }
 
 code {
@@ -96,12 +97,13 @@ a:link {
   text-decoration: none;
   color: rgb(86, 83, 83);
 }
-
+a:visited {
+  color: rgb(86, 83, 83);
+}
 a:hover {
   color: rgb(86, 83, 83);
 }
-
-a:visited {
+a:active {
   color: rgb(86, 83, 83);
 }
 
@@ -218,7 +220,6 @@ img {
   border: 2px solid #d6970a;
 }
 
-/* .menuItems {} */
 .itemNprice {
   width: 100%;
   display: flex;
@@ -229,7 +230,64 @@ img {
 .price {
   font-size: 18px;
 }
+/* gallery */
+.gallerySection {
+  padding-bottom: 75px;
+  background-image: url(./images/gradienta.jpg);
+}
+.galleryContainer {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+  -webkit-column-width: 100%;
+  -moz-column-width: 100%;
+  column-width: 100%;
+  padding: 0 1px;
+}
+.galleryContainer .galleryImages {
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+.pics {
+  position: relative;
+}
+.pics:hover {
+  filter: opacity(0.7);
+}
+.galleryCredit {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  color: #d6970a;
+  font-weight: 700;
+  z-index: 2;
+}
 
+.modalBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9987a5;
+  border: none;
+}
+.modalImage {
+  border: none;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+.modalFooter {
+  height: 48px;
+
+  background-color: #9987a5;
+}
+/* faqs */
+.faqSection {
+  /* background-image: url(./images/gradienta.jpg); */
+}
 .faqs {
   margin: 10px;
   padding: 20px;
@@ -241,6 +299,8 @@ img {
   padding: 50px;
   margin-bottom: 50px;
   margin-top: 50px;
+
+  background-color: #dabceeb4;
 }
 
 .questionButton {
@@ -485,9 +545,13 @@ input {
   position: fixed;
   bottom: 0;
   left: 0;
-  /* display: flex;
-  align-items: center; */
-  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  z-index: 5;
 }
 
 /* Media query */
@@ -526,8 +590,18 @@ input {
     margin: 2px;
   }
 }
-
+@media screen and (min-width: 568px) {
+  .galleryContainer {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+  .paystackSection {
+    margin: auto;
+  }
+}
 @media screen and (min-width: 730px) {
+  /* navbar */
   .toggle {
     display: none;
   }
@@ -540,6 +614,7 @@ input {
   .show {
     height: 0;
   }
+  /* home */
   .homeSection {
     background-image: url(./images/caitlynBig.jpg);
     height: 85vh;
@@ -555,10 +630,15 @@ input {
   .smallImage {
     display: none;
   }
-}
-@media screen and (min-width: 568px) {
-  .paystackSection {
-    margin: auto;
+  /* gallery */
+  .galleryContainer {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+    padding: 0 1px;
   }
 }
 @media screen and (min-width: 1200px) {

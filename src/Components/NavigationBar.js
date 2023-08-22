@@ -21,7 +21,7 @@ const NavigationBar = () => {
             {navbarItems.map((item) => {
               return (
                 <NavLink to={item.url} activeClassName="active">
-                  <span className="navList" key={item.page}>
+                  <span className="navList" key={item.id}>
                     {item.page}
                   </span>
                 </NavLink>
@@ -41,7 +41,7 @@ const NavigationBar = () => {
         </div>
 
         <div
-          style={{ width: '100vw' }}
+          style={{ width: '100vw', overflow: 'scroll' }}
           className={`${
             toggleMenu ? 'toggleContainer show' : 'toggleContainer'
           }`}
@@ -50,12 +50,15 @@ const NavigationBar = () => {
             {navbarItems.map((item) => {
               return (
                 <NavLink to={item.url} activeClassName="active">
-                  <li className="navList" key={item.page}>
+                  <li className="navList" key={item.id}>
                     {item.page}
                   </li>
                 </NavLink>
               );
             })}
+            <NavLink to="cart" activeClassName="active">
+              <li className="navList">Cart</li>
+            </NavLink>
           </ul>
         </div>
       </div>
